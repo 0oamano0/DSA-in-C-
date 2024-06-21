@@ -39,8 +39,7 @@ public class Problem3 {
             String ip2=sn.nextLine();
             arr1=ip2.split(" ");
             // System.out.println(arr1[1].replace(";",""));
-            System.out.println(arr1[0]+" "+arr1[1]+" #"
-                        +hm.get(arr1[1].replace(";","")));
+            System.out.println(arr1[0]+" "+arr1[1]+" #"+hm.get(arr1[1].replace(";","")));
         }
 
     }
