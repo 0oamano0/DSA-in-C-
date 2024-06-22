@@ -53,6 +53,44 @@ public class useOfSinglyLL {
         }
         head=head.next;
     }
+
+    void insertAtPos(int data,int pos){
+        if(pos==0){
+            insertAtBeginning(data);
+            return;
+        }
+        Node newNode=new Node(data);
+        Node temp=head;
+        for (int i = 1; i < pos; i++) {
+            temp=temp.next;
+            if(temp.next==null){
+                System.out.println("Invalid Position");
+                return;
+            }
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+            
+    }
+    void deleteAtPos(int pos){
+        Node temp=head;
+        if(head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+        if(pos==0){
+            deleteAtBeginning();
+            return;
+        }
     
+        for(int i=1;i<pos;i++){
+            temp=temp.next;
+        }
+        temp.next=temp.next.next;
+
+    }
     
+
 }
+    
+
